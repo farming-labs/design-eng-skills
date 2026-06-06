@@ -41,4 +41,4 @@ Restart Codex after installing so the skill is discovered.
 
 ## Skills
 
-- `design-engineer`: Design and build polished frontend experiences for React, Next.js, Vite, docs sites, dashboards, studio apps, product websites, component libraries, and design systems. Covers visual language, primitive/component APIs, interactions, motion, icons, loading states, and browser-based visual QA.
+- `design-engineer`: Design and build polished frontend experiences for React, Next.js, Vite, docs sites, dashboards, studio apps, product websites, component libraries, and design systems. Covers visual language, primitive/component APIs, design-engineering tool selection, interactions, motion, icons, loading states, and browser-based visual QA.

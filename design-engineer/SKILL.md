@@ -1,6 +1,6 @@
 ---
 name: design-engineer
-description: "End-to-end frontend design engineering workflow for improving React, Next.js, Vite, docs sites, dashboards, component systems, product websites, and studio-style apps. Use when the user asks to make UI/UX/design/frontend/website/docs/app screens more polished, curated, premium, usable, production-grade, responsive, animated, or visually consistent; when editing TSX/JSX/CSS/Tailwind/Fumadocs/shadcn/Radix/lucide interfaces; or when adding loaders, icons, empty/loading/error states, motion, interaction details, and visual QA."
+description: "End-to-end frontend design engineering workflow for improving React, Next.js, Vite, docs sites, dashboards, component systems, product websites, and studio-style apps. Use when the user asks to make UI/UX/design/frontend/website/docs/app screens more polished, curated, premium, usable, production-grade, responsive, animated, or visually consistent; when editing TSX/JSX/CSS/Tailwind/Fumadocs/shadcn/Radix/lucide interfaces; when choosing design-engineering tools or inspiration resources; or when adding loaders, icons, empty/loading/error states, motion, interaction details, and visual QA."
 ---
 
 # Design Engineer
@@ -20,9 +20,10 @@ python /path/to/design-engineer/scripts/design_audit.py <app-or-package-path>
 2. Read `references/design-language.md` when the target is a docs site, product landing page, component library, studio app, dashboard, or technical OSS website.
 3. Read `references/implementation-patterns.md` when building a component library, adding reusable primitives, or mining existing source for package/component patterns.
 4. Read `references/interaction-language.md` before changing navigation, command palettes, tables, forms, copy actions, loading/empty/error states, dialogs, charts, or mobile flows.
-5. Read `references/motion-and-icons.md` before adding animation, transitions, loaders, status indicators, or iconography.
-6. Implement the smallest complete design pass that improves the real workflow.
-7. Run the app's typecheck/build/tests when available, then visually verify the edited screens in a browser across desktop and mobile.
+5. Read `references/design-tools.md` when choosing design-engineering tools, design-to-code workflows, source-of-truth strategy, asset sources, or inspiration libraries.
+6. Read `references/motion-and-icons.md` before adding animation, transitions, loaders, status indicators, or iconography.
+7. Implement the smallest complete design pass that improves the real workflow.
+8. Run the app's typecheck/build/tests when available, then visually verify the edited screens in a browser across desktop and mobile.
 
 ## Workflow
 
@@ -78,6 +79,7 @@ Before finishing:
 - `references/design-language.md`: portable technical-product design language for docs, OSS sites, dashboards, and studio apps.
 - `references/implementation-patterns.md`: package and component implementation patterns for building polished apps and component libraries.
 - `references/interaction-language.md`: interaction grammar for navigation, command, copy, forms, tables, charts, states, dialogs, and mobile.
+- `references/design-tools.md`: tool directory and selection guide for design engineers.
 - `references/motion-and-icons.md`: motion vocabulary, loader/icon choices, and animation implementation rules.
 
 ## Example Requests

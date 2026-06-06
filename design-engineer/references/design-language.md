@@ -22,6 +22,7 @@ The target design language is technical, product-forward, and component-system a
 Use these as live design references when network access is available. Inspect them for component behavior, composition, copy rhythm, primitive styling, and motion language. Do not clone them blindly; translate the patterns into the current repo's stack and tokens.
 
 - `https://www.components.build`: open standard for modern, composable, accessible UI components; use as the default engineering standard for reusable component APIs and design-system guidelines.
+- `https://designtools.fyi/`: tool directory for comparing design-engineering tools by role, facet, tag, source of truth, price, and size.
 - `https://vercel.com`: developer-platform product reference for crisp typography, technical storytelling, docs/product hierarchy, dashboard polish, deployment/status affordances, and restrained visual systems.
 - `https://e2b.dev`: AI agent cloud reference for infrastructure/product storytelling, agent runtime concepts, sandbox/developer workflows, and technical diagrams.
 - `https://hex.tech`: AI analytics platform reference for data-heavy product UI, collaborative analytics workflows, charts, notebooks, dashboards, and team-oriented product storytelling.
