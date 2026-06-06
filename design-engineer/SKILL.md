@@ -18,10 +18,11 @@ python /path/to/design-engineer/scripts/design_audit.py <app-or-package-path>
 ```
 
 2. Read `references/design-language.md` when the target is a docs site, product landing page, component library, studio app, dashboard, or technical OSS website.
-3. Read `references/interaction-language.md` before changing navigation, command palettes, tables, forms, copy actions, loading/empty/error states, dialogs, charts, or mobile flows.
-4. Read `references/motion-and-icons.md` before adding animation, transitions, loaders, status indicators, or iconography.
-5. Implement the smallest complete design pass that improves the real workflow.
-6. Run the app's typecheck/build/tests when available, then visually verify the edited screens in a browser across desktop and mobile.
+3. Read `references/implementation-patterns.md` when building a component library, adding reusable primitives, or mining existing source for package/component patterns.
+4. Read `references/interaction-language.md` before changing navigation, command palettes, tables, forms, copy actions, loading/empty/error states, dialogs, charts, or mobile flows.
+5. Read `references/motion-and-icons.md` before adding animation, transitions, loaders, status indicators, or iconography.
+6. Implement the smallest complete design pass that improves the real workflow.
+7. Run the app's typecheck/build/tests when available, then visually verify the edited screens in a browser across desktop and mobile.
 
 ## Workflow
 
@@ -75,6 +76,7 @@ Before finishing:
 
 - `scripts/design_audit.py`: quick project scan for stack, UI files, motion/icons, colors, radius, and visual-risk signals.
 - `references/design-language.md`: portable technical-product design language for docs, OSS sites, dashboards, and studio apps.
+- `references/implementation-patterns.md`: package and component implementation patterns for building polished apps and component libraries.
 - `references/interaction-language.md`: interaction grammar for navigation, command, copy, forms, tables, charts, states, dialogs, and mobile.
 - `references/motion-and-icons.md`: motion vocabulary, loader/icon choices, and animation implementation rules.
 

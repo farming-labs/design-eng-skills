@@ -12,6 +12,12 @@ From the future GitHub repo:
 npx skills add farming-labs/design-eng-skills --skill design-engineer
 ```
 
+Codex-targeted install:
+
+```bash
+npx skills add farming-labs/design-eng-skills --skill design-engineer --agent codex --yes
+```
+
 Full GitHub URL form:
 
 ```bash
