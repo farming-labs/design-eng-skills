@@ -9,7 +9,7 @@ Common stacks that produced the strongest UI:
 - App framework: Next.js for docs/product sites; Vite + React for dense studio/admin apps.
 - Styling: Tailwind CSS, usually with `clsx`, `tailwind-merge`, and a local `cn(...)` helper.
 - Component APIs: Radix primitives plus shadcn-style wrappers, `@radix-ui/react-slot`, `class-variance-authority`, forwardRef, native props, and `asChild` where useful.
-- Icons: `lucide-react` for ordinary UI actions and objects; pixel/block icons only for deliberate pixel/studio language; official brand SVGs or `simple-icons` for brands.
+- Icons: `lucide-react` for ordinary UI actions and objects; Iconify for alternate open-source icon families and variants; pixel/block icons only for deliberate pixel/studio language; official brand SVGs or `simple-icons` for brands.
 - Command/search: `cmdk` for command palettes and searchable action menus.
 - Feedback: `sonner` or toast primitives for nonblocking confirmation; inline feedback for critical errors.
 - Charts/data: `recharts`, maps, XYFlow, and number-flow style count animation for dashboards.
@@ -98,7 +98,7 @@ When analyzing an existing repo before a design pass, inspect:
 - `package.json` dependencies and scripts.
 - `components/ui/*`, `components/*`, `app/page.tsx`, `app/globals.css`, `app/global.css`, route layouts, dashboard widgets, and docs config.
 - Existing `Button`, `Card`, `Command`, `Copy`, `CodeBlock`, `Tabs`, `Dialog`, `Popover`, `Table`, `Chart`, `Skeleton`, and `Toast` implementations.
-- Icon imports and whether lucide, simple-icons, pixel icons, or custom SVGs are already used.
+- Icon imports and whether lucide, Iconify, simple-icons, pixel icons, or custom SVGs are already used.
 - Radius and color usage; decide whether the surface is square technical, soft product, or mixed.
 - Motion files and missing `prefers-reduced-motion` handling.
 - Loading, empty, error, success, disabled, selected, active, hover, focus-visible, and mobile states.

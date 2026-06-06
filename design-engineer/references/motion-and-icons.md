@@ -8,6 +8,7 @@ Use this reference before adding animation, transitions, loaders, status indicat
 - `https://icons.icantcode.fyi/`: dot/matrix loader gallery for quiet 5x5 SVG loading indicators.
 - `https://github.com/icantcodefyi/dot-matrix-animations`: source repo for the dot/matrix loader set.
 - `https://pixeliconlibrary.com`: open-source 24px-grid pixel icon library for retro/block icon systems.
+- `https://icon-sets.iconify.design/`: searchable catalog of open-source icon sets, variants, grids, palettes, and licenses.
 
 ## Motion Vocabulary To Use In Decisions
 
@@ -59,6 +60,9 @@ Keep loaders small, subdued, and semantically labeled. Do not replace real progr
 - Match lucide `size`, `strokeWidth`, opacity, and alignment within each toolbar, nav item, table row, or button group.
 - Use custom pixel SVG icons only when the product already uses a pixel/block language or the icon needs to match a technical studio-style geometry.
 - Use Pixel Icon Library when a consistent pixelated icon set is desired; keep the set visually separate from lucide action icons unless the whole product intentionally uses pixel geometry.
+- Use Iconify icon sets when lucide is not enough, when the UI needs a different stroke/fill family, or when browsing multiple variants is useful. Check the set license, grid size, palette, and visual weight before adopting it.
+- Prefer one Iconify family per surface. Do not mix Tabler, Material, Phosphor, Carbon, HeroIcons, Remix, IconPark, and other families in the same toolbar unless the product intentionally has a mixed icon language.
+- Iconify is especially useful for programming/file icons, brand-adjacent sets, flags/maps, spinners, multicolor icons, and alternate filled/outline/two-tone variants.
 - Use `simple-icons` for brand logos when installed and appropriate.
 - Icon-only buttons need accessible labels or tooltips.
 - Match stroke width, optical size, and alignment across a toolbar.

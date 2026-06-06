@@ -34,6 +34,7 @@ Use these as live design references when network access is available. Inspect th
 - `https://21st.dev`: community React component reference for exploring, copying, and remixing high-quality UI components from designers and developers.
 - `https://react-bits.dev`: React Bits reference for animated UI components, interactive backgrounds, shader-like effects, text animations, and reusable React component ideas.
 - `https://pixeliconlibrary.com`: open-source pixelated icon library reference for 24px-grid pixel icons when a product needs a deliberate retro/block icon style.
+- `https://icon-sets.iconify.design/`: Iconify icon-set catalog for browsing many open-source icon families, variants, grid sizes, palettes, and licenses.
 - `https://better-auth.studio`: studio/admin product surface for users, sessions, organizations, events, database, and operational workflows.
 - `https://better-auth.farmui.com`: user-provided Better Auth + FarmUI inspiration target; inspect when reachable for auth/product UI composition, component styling, and FarmUI-aligned interaction patterns.
 - `https://better-auth.com`: polished auth framework website/docs reference for refined dark UI, docs hierarchy, and technical product storytelling.
@@ -71,7 +72,7 @@ When implementation source is available from a repo, website source, component r
 - Docs primitives: feature cards combine lucide foreground/background icons, mono labels, compact chips, 1px rails, corner ticks, and subtle texture; code/terminal blocks need header, copy, language/title, and overflow safety.
 - FarmUI sections: hero and feature sections commonly combine command modules, CTA buttons, GitHub links, preview surfaces, gradients/grid/ripple backgrounds, and section wrappers. Keep these effects restrained and responsive.
 - Studio widgets: dense cards carry metric title, value, timeframe, filter, chart/table/list body, loading/error/empty fallback, and customization/drop-target states.
-- Icon language: lucide is the default for normal UI actions; custom pixel/block SVGs are reserved for a deliberate pixel/studio style; dot/matrix SVGs are for loaders/status.
+- Icon language: lucide is the default for normal UI actions; Iconify is the fallback catalog for alternate families and variants; custom pixel/block SVGs are reserved for a deliberate pixel/studio style; dot/matrix SVGs are for loaders/status.
 - Motion: common sources are Tailwind animation, Framer Motion, keyframes, and hover/transition utilities. Add reduced-motion handling when introducing new motion.
 
 Apply these patterns as guidance, but always adapt them to the target project's current tokens, framework version, accessibility model, and component ownership.
@@ -211,6 +212,8 @@ Use this contract as the default house style when the current repo has no strong
 - Use icon-only buttons only with `aria-label` and a tooltip for non-obvious actions.
 - Use custom pixel/block SVG icons only when the product already has that visual language or the object needs a bespoke symbol.
 - Use Pixel Icon Library (`https://pixeliconlibrary.com`) when the project needs a consistent pixelated icon set; keep icons on the 24px grid and align them optically with buttons, badges, and rows.
+- Use Iconify (`https://icon-sets.iconify.design/`) when lucide does not provide the right symbol or style, or when the project needs filled, outline, two-tone, multicolor, programming, flag/map, spinner, or alternative UI icon variants.
+- When adopting Iconify icons, choose one family per surface, check the icon-set license, preserve grid and viewBox consistency, and match stroke/fill weight to nearby text and controls.
 - Use `simple-icons` or official brand SVGs for brand marks when present; do not use lucide for brand logos.
 - Use dot/matrix loaders from `https://icons.icantcode.fyi/` for loading/status animation, not as general-purpose action icons.
 
