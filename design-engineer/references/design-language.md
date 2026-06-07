@@ -17,6 +17,16 @@ The target design language is technical, product-forward, and component-system a
 - High contrast, restrained accents: use black/white or near-neutral foundations, then introduce accent color sparingly for state, focus, or brand.
 - Agent/developer ready: include copyable commands, searchable docs, clear empty/error/loading states, and tool-friendly content structure.
 
+## Craft Posture
+
+Good design-engineering is trained through inspection and repetition. Before a serious polish pass, study the best nearby references, name what makes them work, then translate only the useful mechanics into the current product.
+
+- Small details compound: press states, focus states, hover gates, copy confirmation, transform origin, empty states, disabled states, tooltip timing, loading labels, and reduced-motion behavior all add up.
+- Beauty is product leverage only when the workflow also gets clearer, faster, or easier to trust.
+- Defaults matter: buttons, toasts, dialogs, tables, charts, code blocks, and docs cards should look good before the user customizes anything.
+- Review polish in motion, not only in screenshots. Slow down transitions, resize the viewport, try keyboard flows, and check touch behavior when the UI depends on gestures.
+- When an interaction is repeated all day, make it immediate. When it is rare and explanatory, motion can carry more personality.
+
 ## Public Inspiration Sites
 
 Use these as live design references when network access is available. Inspect them for component behavior, composition, copy rhythm, primitive styling, and motion language. Do not clone them blindly; translate the patterns into the current repo's stack and tokens.

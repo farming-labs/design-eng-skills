@@ -10,6 +10,42 @@ Use this reference before adding animation, transitions, loaders, status indicat
 - `https://pixeliconlibrary.com`: open-source 24px-grid pixel icon library for retro/block icon systems.
 - `https://icon-sets.iconify.design/`: searchable catalog of open-source icon sets, variants, grids, palettes, and licenses.
 
+## Microinteraction Craft Lens
+
+Before adding motion, decide by frequency and purpose:
+
+- High-frequency actions such as command palettes, keyboard shortcuts, repeated row actions, and dense toolbar work should be instant or nearly instant. Do not slow expert workflows with decorative animation.
+- Common hover/focus/list interactions should be subtle and short.
+- Occasional state changes such as dialogs, drawers, toasts, and page sections can use standard motion when it improves spatial understanding.
+- Rare onboarding, demos, and celebratory moments can carry more delight, but only when the product story benefits.
+- Valid motion purposes are feedback, state indication, spatial continuity, explanation, and reducing jarring transitions. "Looks cool" is not enough for repeated UI.
+
+Review microinteractions as production details:
+
+- Pressable elements should acknowledge press immediately with a subtle scale, inset, color, or border response.
+- Popovers, dropdowns, tooltips, and context menus should animate from their trigger when the primitive exposes a transform-origin variable. Center-origin is reserved for centered modals.
+- Avoid entering from `scale(0)`. Start near the final size with opacity so the element feels present before it settles.
+- Use transitions for interruptible dynamic UI such as toasts, menus, toggles, and rapidly changing states. Keyframes are better for predetermined ambient loops.
+- Gate hover-only motion with `@media (hover: hover) and (pointer: fine)` so touch devices do not get accidental hover behavior.
+- Reduced motion means fewer and gentler movement transitions, not removing every useful opacity/color/focus cue.
+- Check motion slowly when it matters: transform origin, timing, color crossfades, stagger, and exit timing are easier to see at reduced speed.
+
+## Motion Review Fixes
+
+Use this table when reviewing or polishing UI motion:
+
+| Issue | Better Direction | Why |
+| --- | --- | --- |
+| `transition: all` | Transition exact properties such as `transform`, `opacity`, `background-color`, or `border-color`. | Exact transitions avoid accidental layout work and make timing intentional. |
+| Entry starts at `scale(0)` | Start near final size, such as `scale(0.95)` with opacity. | Elements should feel like they settle into place, not appear from nowhere. |
+| UI uses `ease-in` | Use `ease-out` for entrances/feedback or `ease-in-out` for movement between two visible states. | Immediate motion feels more responsive. |
+| Popover scales from center | Use the primitive's trigger-origin variable when available. | Anchored surfaces should visually come from the control that opened them. |
+| Keyboard action animates open/close | Make it instant or nearly instant. | Expert flows should not wait on decorative timing. |
+| Common UI transition exceeds 300ms | Bring it into the 120-250ms range unless it explains something. | Slow repeated motion makes the product feel slower. |
+| Hover motion applies on touch | Gate hover effects with `@media (hover: hover) and (pointer: fine)`. | Touch devices should not get accidental hover behavior. |
+| Rapidly changing UI uses keyframes | Prefer transitions or spring/WAAPI behavior that can be interrupted. | Dynamic UI should retarget smoothly when users act quickly. |
+| Exit uses the same timing as entrance | Make exit/release faster than enter/hold. | The system should respond quickly after the user's decision. |
+
 ## Motion Vocabulary To Use In Decisions
 
 Name motion precisely in plans and code comments:
@@ -33,6 +69,8 @@ Start with these and tune by feel:
 - Page/section transition: 240-450ms.
 - Ambient loops: 2-12s, low opacity, no layout shift.
 - Loading indicators: 0.8-1.8s loop for spinners; slower for ambient "thinking" states.
+- Repeated UI interactions should usually stay below 300ms; expert workflows often need no entrance/exit animation at all.
+- Use faster exit/release timing than enter/hold timing when the user has already made a decision.
 
 Always respect `prefers-reduced-motion`. In CSS, provide a reduced-motion override. In JS animation libraries, disable or simplify nonessential motion.
 

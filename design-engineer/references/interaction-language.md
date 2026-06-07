@@ -11,6 +11,8 @@ Use this reference before changing how a UI behaves. The goal is to make every i
 - Use the same visual treatment for the same interaction across the app.
 - Every interactive element needs hover, focus-visible, active/pressed, disabled, and loading behavior when applicable.
 - Keyboard flows should match pointer flows: tab order, shortcuts, escape/close, enter/submit, arrow navigation for menus/lists.
+- High-frequency interactions should feel immediate. Command palettes, keyboard shortcuts, row actions, toolbar buttons, and repeated dashboard controls should avoid decorative entrance/exit motion.
+- Add motion only when it clarifies state, confirms feedback, explains spatial movement, or prevents a jarring change.
 
 ## Navigation
 
@@ -27,6 +29,7 @@ Use navigation to communicate location and scope:
 Command palettes and search should feel fast and useful:
 
 - Trigger with visible button and keyboard shortcut when the app supports shortcuts.
+- Keyboard-triggered command palettes should open instantly or nearly instantly; repeated expert actions should not wait for flourish.
 - Include recent, suggested, and route/action results when useful.
 - Keep input focused on open; close on escape; preserve scroll/focus behavior on close.
 - Show empty, loading, and no-results states.
