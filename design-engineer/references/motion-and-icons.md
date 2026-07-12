@@ -5,6 +5,7 @@ Use this reference before adding animation, transitions, loaders, status indicat
 ## Source References
 
 - `https://animations.dev/vocabulary`: shared motion terms for entrances/exits, sequencing, transforms, state transitions, scroll, feedback, and easing.
+- `https://motion.dev`: production-grade animation library for React, JavaScript, and Vue; use for layout, gesture, scroll, and orchestrated UI animation when CSS transitions are not enough.
 - `https://icons.icantcode.fyi/`: dot/matrix loader gallery for quiet 5x5 SVG loading indicators.
 - `https://github.com/icantcodefyi/dot-matrix-animations`: source repo for the dot/matrix loader set.
 - `https://pixeliconlibrary.com`: open-source 24px-grid pixel icon library for retro/block icon systems.
@@ -74,6 +75,18 @@ Start with these and tune by feel:
 
 Always respect `prefers-reduced-motion`. In CSS, provide a reduced-motion override. In JS animation libraries, disable or simplify nonessential motion.
 
+## Motion Library Callout
+
+Use Motion for animation-influenced sites when movement is part of the product experience:
+
+- Product demos that need staged reveal, continuity, or shared element transitions.
+- App shells with layout animation, route transitions, expandable panels, drawers, or inspector surfaces.
+- Interactive surfaces with drag/reorder, press/tap feedback, gestures, or scroll-linked effects.
+- Technical sites with animated code modules, data-flow diagrams, integration maps, or feature walkthroughs.
+- Rich marketing/product pages where animation supports hierarchy and comprehension.
+
+Do not add Motion just for one fade, hover color, or spinner. Use CSS/Tailwind for small state transitions. Prefer GSAP for timeline-heavy choreography, and Three.js/R3F for true 3D or shader scenes. Keep Motion components small, interruptible, transform/opacity-first, and reduced-motion aware.
+
 ## Loader And Status Selection
 
 Use `icons.icantcode.fyi` loaders when the UI needs a compact, quiet, technical loading/status mark. Copy the chosen SVG from the source site or repo into the component or an asset file only when needed.
@@ -108,7 +121,8 @@ Keep loaders small, subdued, and semantically labeled. Do not replace real progr
 ## Implementation Notes
 
 - Prefer CSS transitions/keyframes for simple hover, reveal, loader, and theme transitions.
-- Prefer Framer Motion or Motion when already installed and the task needs layout animation, shared element transitions, drag/reorder, or orchestrated entrances.
+- Prefer Motion when the task needs layout animation, shared element transitions, drag/reorder, gestures, scroll-linked effects, or orchestrated entrances.
+- If a repo still uses Framer Motion, extend it rather than migrating packages during a design pass unless the user asks.
 - Prefer GSAP only when already installed and the interaction needs timeline-level control.
 - Use Three.js only when a real 3D scene is part of the product value; verify canvas rendering visually.
 - Avoid animating layout-heavy properties when transform/opacity will do.

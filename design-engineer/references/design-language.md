@@ -33,6 +33,7 @@ Use these as live design references when network access is available. Inspect th
 
 - `https://www.components.build`: open standard for modern, composable, accessible UI components; use as the default engineering standard for reusable component APIs and design-system guidelines.
 - `https://base-ui.com`: Base UI foundation primitive layer for accessible, unstyled React components when building a custom component system from headless parts.
+- `https://motion.dev`: Motion animation foundation for React/JavaScript/Vue sites that need production-grade layout, gesture, scroll, and orchestrated UI animation.
 - `https://designtools.fyi/`: tool directory for comparing design-engineering tools by role, facet, tag, source of truth, price, and size.
 - `https://vercel.com`: developer-platform product reference for crisp typography, technical storytelling, docs/product hierarchy, dashboard polish, deployment/status affordances, and restrained visual systems.
 - `https://e2b.dev`: AI agent cloud reference for infrastructure/product storytelling, agent runtime concepts, sandbox/developer workflows, and technical diagrams.
@@ -83,6 +84,17 @@ Choose the component foundation deliberately:
 
 Base UI and Radix are behavior/accessibility foundations. shadcn/ui and FarmUI are styled implementation layers. When building a component library, pick one foundation for behavior, then wrap it in local primitives with consistent names, tokens, variants, and docs.
 
+## Animation Foundation
+
+Choose the animation layer by product need:
+
+- CSS/Tailwind transitions: use for simple hover, focus, pressed, theme, loader, and reveal states.
+- Motion (`https://motion.dev`): use for animation-influenced sites, product demos, app transitions, layout animation, shared element continuity, drag/reorder, gestures, scroll-linked effects, and orchestrated entrances/exits.
+- GSAP: use when the interaction needs timeline-level sequencing, complex scroll choreography, or animation tooling that Motion does not cover cleanly.
+- Three.js/R3F: use when the product needs real 3D, shader, or canvas/WebGL scenes rather than UI element animation.
+
+Motion should support the product story, not become the story by default. Prefer it when movement explains hierarchy, continuity, state, or demo flow; keep high-frequency app actions instant and always provide reduced-motion behavior.
+
 ## Component Source Pattern Brief
 
 When implementation source is available from a repo, website source, component registry, screenshot, or user-provided path, use it as source material for component behavior and styling. The recurring patterns to preserve are:
@@ -96,7 +108,7 @@ When implementation source is available from a repo, website source, component r
 - FarmUI sections: hero and feature sections commonly combine command modules, CTA buttons, GitHub links, preview surfaces, gradients/grid/ripple backgrounds, and section wrappers. Keep these effects restrained and responsive.
 - Studio widgets: dense cards carry metric title, value, timeframe, filter, chart/table/list body, loading/error/empty fallback, and customization/drop-target states.
 - Icon language: lucide is the default for normal UI actions; Iconify is the fallback catalog for alternate families and variants; custom pixel/block SVGs are reserved for a deliberate pixel/studio style; dot/matrix SVGs are for loaders/status.
-- Motion: common sources are Tailwind animation, Framer Motion, keyframes, and hover/transition utilities. Add reduced-motion handling when introducing new motion.
+- Motion: common sources are Tailwind animation, Motion, Framer Motion, keyframes, and hover/transition utilities. Use Motion for layout/gesture/scroll/orchestrated animation when the product benefits; add reduced-motion handling when introducing new motion.
 
 Apply these patterns as guidance, but always adapt them to the target project's current tokens, framework version, accessibility model, and component ownership.
 
