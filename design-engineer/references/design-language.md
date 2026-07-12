@@ -52,12 +52,12 @@ Use these as live design references when network access is available. Inspect th
 - `https://better-auth.farmui.com`: user-provided Better Auth + FarmUI inspiration target; inspect when reachable for auth/product UI composition, component styling, and FarmUI-aligned interaction patterns.
 - `https://better-auth.com`: polished auth framework website/docs reference for refined dark UI, docs hierarchy, and technical product storytelling.
 
-## Agent-Readable Design Specs
+## Design Inspiration
 
-Use these low-key as inspiration when an agent needs a compact design-system brief before shaping a site, app, or component library:
+Use these low-key as inspiration before shaping a site, app, or component library:
 
-- `https://vercel.com/design.md`: inspect for agent-readable product design guidance, semantic design-system constraints, Geist/monochrome precision, interface rules, and how design decisions can be written as reusable engineering context.
-- `https://resend.com/design.md`: inspect for developer-first product tone, minimal dark API surfaces, email/product composition, restrained typography, and compact design guidance that an agent can translate into implementation.
+- `https://vercel.com/design.md`: inspect for product design guidance, semantic design-system constraints, Geist/monochrome precision, interface rules, and reusable engineering context.
+- `https://resend.com/design.md`: inspect for developer-first product tone, minimal dark API surfaces, email/product composition, restrained typography, and compact design guidance.
 
 Treat these as reference material, not house style overrides. Pull the useful mechanics such as token clarity, type rhythm, component tone, motion restraint, and copy precision, then adapt them to the current repo's brand and primitives.
 
