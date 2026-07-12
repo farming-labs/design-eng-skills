@@ -32,6 +32,7 @@ Good design-engineering is trained through inspection and repetition. Before a s
 Use these as live design references when network access is available. Inspect them for component behavior, composition, copy rhythm, primitive styling, and motion language. Do not clone them blindly; translate the patterns into the current repo's stack and tokens.
 
 - `https://www.components.build`: open standard for modern, composable, accessible UI components; use as the default engineering standard for reusable component APIs and design-system guidelines.
+- `https://base-ui.com`: Base UI foundation primitive layer for accessible, unstyled React components when building a custom component system from headless parts.
 - `https://designtools.fyi/`: tool directory for comparing design-engineering tools by role, facet, tag, source of truth, price, and size.
 - `https://vercel.com`: developer-platform product reference for crisp typography, technical storytelling, docs/product hierarchy, dashboard polish, deployment/status affordances, and restrained visual systems.
 - `https://e2b.dev`: AI agent cloud reference for infrastructure/product storytelling, agent runtime concepts, sandbox/developer workflows, and technical diagrams.
@@ -71,11 +72,22 @@ Apply it this way:
 
 This standard should govern how primitives are built; the visual style below governs how they should feel.
 
+## Foundation UI Layers
+
+Choose the component foundation deliberately:
+
+- Base UI (`https://base-ui.com`): use as a headless foundation layer when the project needs accessible, unstyled React primitives with full control over CSS, tokens, motion, and component anatomy.
+- Radix UI: use as a headless primitive layer when the repo already uses Radix/shadcn patterns or needs Radix-specific ecosystem compatibility.
+- shadcn/ui: use as a copy-in styled component layer when the project benefits from Tailwind-ready primitives, local ownership, CVA variants, and direct code editing.
+- FarmUI: use as the Farming Labs-flavored styled component layer when its tokens, animation, and visual language match the product.
+
+Base UI and Radix are behavior/accessibility foundations. shadcn/ui and FarmUI are styled implementation layers. When building a component library, pick one foundation for behavior, then wrap it in local primitives with consistent names, tokens, variants, and docs.
+
 ## Component Source Pattern Brief
 
 When implementation source is available from a repo, website source, component registry, screenshot, or user-provided path, use it as source material for component behavior and styling. The recurring patterns to preserve are:
 
-- Shadcn/Radix primitive base: buttons, cards, dialogs, sheets, popovers, commands, tabs, forms, select, checkbox, radio, slider, table, chart, skeleton, toast, and tooltip are built as small forwardRef components with native props, CVA variants, `cn(...)`, and optional `asChild`.
+- Shadcn/Radix/Base UI primitive base: buttons, cards, dialogs, sheets, popovers, commands, tabs, forms, select, checkbox, radio, slider, table, chart, skeleton, toast, and tooltip are built as small components with native props, CVA variants, `cn(...)`, stable data attributes, and optional `asChild` or render-slot composition where the foundation supports it.
 - Button system: use `variant` and `size` APIs, preserve width while loading, support icon buttons, prefer lucide icons, expose focus-visible states, and use tight heights for dense app UIs.
 - Card anatomy: export `Card`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, and `CardFooter`; use cards for widgets/repeated items and add rails/corner ticks/grid texture when the visual language needs more structure.
 - Command/search: use `cmdk` for command palettes; include search icon, grouped results, separators, empty state, keyboard flow, route/action metadata, and disabled/plugin states.
@@ -184,11 +196,12 @@ Useful local patterns to inspect when they exist in the target repo:
 
 - Keep component APIs small and consistent with local primitives.
 - Use `components.build` as the default standard for reusable primitive APIs, anatomy, accessibility, tokenization, state, styling, typing, and docs.
+- Treat Base UI, Radix, and React Aria as foundation behavior layers; wrap them in local components before exposing them as the product's design system.
 - Prefer `cn(...)`, `class-variance-authority`, `tailwind-merge`, and existing `components/ui/*` variants when present.
 - Avoid broad rewrites of shared primitives unless the primitive is the actual problem.
 - Define semantic tokens before scattering raw colors through components.
 - For black/white themes, introduce hierarchy through opacity, borders, texture, spacing, and typography instead of many hues.
-- If a project already uses a theme package, Fumadocs, shadcn/ui, Radix, lucide, or custom primitives, extend those systems rather than bypassing them.
+- If a project already uses a theme package, Fumadocs, shadcn/ui, Base UI, Radix, lucide, or custom primitives, extend those systems rather than bypassing them.
 
 ## Primitive Style Contract
 
@@ -203,7 +216,7 @@ Use this contract as the default house style when the current repo has no strong
 - Labels: short, uppercase or small caps when the repo uses that rhythm; keep letter spacing modest and readable.
 - Density: technical surfaces should feel compact and intentional, not sparse.
 - Focus: every primitive needs visible `focus-visible` treatment that fits the border language.
-- Component source: when FarmUI or shadcn-style primitives exist, compose from those primitives first and only create new primitives when the local system is missing the behavior.
+- Component source: when FarmUI, shadcn-style, Base UI-backed, or Radix-backed primitives exist, compose from those primitives first and only create new primitives when the local system is missing the behavior.
 
 ### Buttons
 
