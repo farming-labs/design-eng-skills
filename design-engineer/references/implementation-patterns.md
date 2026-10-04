@@ -2,6 +2,8 @@
 
 Use this reference when building a component library, designing reusable primitives, or improving an app by mining existing source. These patterns are distilled from the provided component sources and public inspiration sites; adapt them to the current repo instead of copying blindly.
 
+For concrete library choices and additional patterns such as file uploads, trees, Kanban, onboarding, and chat, read [UI Components](ui-components.md). Use the local component API first; external examples should fill a specific gap.
+
 ## Package Stack Patterns
 
 Common stacks that produced the strongest UI:

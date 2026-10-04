@@ -42,3 +42,7 @@ Restart Codex after installing so the skill is discovered.
 ## Skills
 
 - `design-engineer`: Design and build polished frontend experiences for React, Next.js, Vite, docs sites, dashboards, studio apps, product websites, component libraries, and design systems. Covers visual language, primitive/component APIs, design-engineering tool selection, interactions, motion, icons, loading states, and browser-based visual QA.
+
+The [UI component guide](design-engineer/references/ui-components.md) includes 21 curated sources from [Designeer](https://www.designeer.xyz/components) and complementary libraries, with guidance for choosing and adapting forms, navigation, uploads, tables, charts, boards, motion, marketing blocks, and chat components.
+
+The [design craft reference](design-engineer/references/design-craft.md) adds Jakub Krehel's `better-ui`, Emil Kowalski's `emil-design-eng`, and the Sales CRM demo, with attributed polish guidance and practical patterns for dense business apps.

@@ -11,13 +11,13 @@ Use this skill to turn rough or merely functional frontend work into a carefully
 
 ## Quick Start
 
-2. Read `references/design-language.md` when the target is a docs site, product landing page, component library, studio app, dashboard, or technical OSS website.
-3. Read `references/implementation-patterns.md` when building a component library, adding reusable primitives, or mining existing source for package/component patterns.
-4. Read `references/interaction-language.md` before changing navigation, command palettes, tables, forms, copy actions, loading/empty/error states, dialogs, charts, or mobile flows.
-5. Read `references/design-tools.md` when choosing design-engineering tools, design-to-code workflows, source-of-truth strategy, asset sources, or inspiration libraries.
-6. Read `references/motion-and-icons.md` before adding animation, transitions, loaders, status indicators, or iconography.
-7. Implement the smallest complete design pass that improves the real workflow.
-8. Run the app's typecheck/build/tests when available, then visually verify the edited screens in a browser across desktop and mobile.
+1. Read `references/design-language.md` when the target is a docs site, product landing page, component library, studio app, dashboard, or technical OSS website. Read [Design Craft References](references/design-craft.md) for Jakub Krehel's and Emil Kowalski's skill references or the Sales CRM example.
+2. Read `references/implementation-patterns.md` when building a component library, adding reusable primitives, or mining existing source for package/component patterns. Read [UI Components](references/ui-components.md) when sourcing a component, comparing libraries, or implementing a pattern missing from the local UI kit.
+3. Read `references/interaction-language.md` before changing navigation, command palettes, tables, forms, copy actions, loading/empty/error states, dialogs, charts, or mobile flows.
+4. Read `references/design-tools.md` when choosing design-engineering tools, design-to-code workflows, source-of-truth strategy, asset sources, or inspiration libraries.
+5. Read `references/motion-and-icons.md` before adding animation, transitions, loaders, status indicators, or iconography.
+6. Implement the smallest complete design pass that improves the real workflow.
+7. Run the app's typecheck/build/tests when available, then visually verify the edited screens in a browser across desktop and mobile.
 
 ## Workflow
 
@@ -26,6 +26,7 @@ Use this skill to turn rough or merely functional frontend work into a carefully
 - Identify whether the screen is a docs/product website, operational app, dashboard, editor, component library, auth surface, or interactive demo.
 - Open the primary route/component and its local primitives before touching styles.
 - Prefer existing libraries and patterns: local UI components, `cn` helpers, Tailwind tokens, shadcn/Radix primitives, lucide icons, docs/theme packages, motion libraries already installed, and existing data/loading flows.
+- For missing UI pieces, use the component reference to find a suitable source, inspect its current docs, then adapt the smallest useful component to the local system. Check the underlying primitive and dependency versions before importing registry code.
 - If the user names inspiration repos, URLs, screenshots, or files, inspect those sources directly. Do not rely on private/local exemplar paths unless the user provides them in the current task.
 
 ### 2. Set a Design Direction
@@ -71,7 +72,9 @@ Before finishing:
 
 - `scripts/design_audit.py`: quick project scan for stack, UI files, motion/icons, colors, radius, and visual-risk signals.
 - `references/design-language.md`: portable technical-product design language for docs, OSS sites, dashboards, and studio apps.
+- [references/design-craft.md](references/design-craft.md): attributed guidance from `better-ui` and `emil-design-eng`, plus an inspected Sales CRM reference for dense business interfaces.
 - `references/implementation-patterns.md`: package and component implementation patterns for building polished apps and component libraries.
+- [references/ui-components.md](references/ui-components.md): curated component sources from Designeer and complementary libraries, with task-based recipes for forms, navigation, data, uploads, motion, marketing, and AI interfaces.
 - `references/interaction-language.md`: interaction grammar for navigation, command, copy, forms, tables, charts, states, dialogs, and mobile.
 - `references/design-tools.md`: tool directory and selection guide for design engineers.
 - `references/motion-and-icons.md`: motion vocabulary, loader/icon choices, and animation implementation rules.
@@ -83,3 +86,5 @@ Before finishing:
 - "Improve the loading, empty, and error states for this table."
 - "Add tasteful motion and status loaders without making the app noisy."
 - "Make this OSS docs site responsive and visually consistent."
+- "Find components on Designeer and adapt a file uploader, searchable combobox, and activity panel to this app."
+- "Use the Jakub Krehel and Emil Kowalski references to polish this CRM's table, filters, and microinteractions."

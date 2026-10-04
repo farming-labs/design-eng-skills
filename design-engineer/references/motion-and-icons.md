@@ -4,6 +4,8 @@ Use this reference before adding animation, transitions, loaders, status indicat
 
 ## Source References
 
+- [UI Components: motion and feedback](ui-components.md#motion-and-feedback): component examples from Motion Primitives, Animate UI, SmoothUI, and NumberFlow; use when a reusable interaction is more useful than a raw animation API.
+- [Design Craft References](design-craft.md#emil-kowalski-emil-design-eng): Emil Kowalski's upstream skill and guidance for tooltip groups and interaction frequency, alongside Jakub Krehel's UI-polish reference.
 - `https://animations.dev/vocabulary`: shared motion terms for entrances/exits, sequencing, transforms, state transitions, scroll, feedback, and easing.
 - `https://motion.dev`: production-grade animation library for React, JavaScript, and Vue; use for layout, gesture, scroll, and orchestrated UI animation when CSS transitions are not enough.
 - `https://icons.icantcode.fyi/`: dot/matrix loader gallery for quiet 5x5 SVG loading indicators.
