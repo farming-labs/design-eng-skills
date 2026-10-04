@@ -21,6 +21,8 @@ The target design language is technical, product-forward, and component-system a
 
 Good design-engineering is trained through inspection and repetition. Before a serious polish pass, study the best nearby references, name what makes them work, then translate only the useful mechanics into the current product.
 
+For attributed source guidance from Jakub Krehel and Emil Kowalski, plus a concrete CRM example, read [Design Craft References](design-craft.md).
+
 - Small details compound: press states, focus states, hover gates, copy confirmation, transform origin, empty states, disabled states, tooltip timing, loading labels, and reduced-motion behavior all add up.
 - Beauty is product leverage only when the workflow also gets clearer, faster, or easier to trust.
 - Defaults matter: buttons, toasts, dialogs, tables, charts, code blocks, and docs cards should look good before the user customizes anything.

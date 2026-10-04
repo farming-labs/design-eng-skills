@@ -4,6 +4,8 @@ Use this reference when selecting tools, inspiration sources, design-to-code wor
 
 ## Live Directory
 
+- [Designeer components](https://www.designeer.xyz/components): discover UI libraries, registries, blocks, and motion components. Follow a listing to the original project's docs before choosing an implementation.
+- Read [UI Components](ui-components.md) for a curated subset with concrete component examples, selection criteria, and implementation recipes. Use the directory for gaps rather than browsing every library on every task.
 - `https://designtools.fyi/`: compare design tools by role, facet, tag, source of truth, price, and size.
 - Start with the Design Engineer archetype when the job is bridging design and production code.
 - Use facets to narrow intent: Contributing Code, UI Craft, Design Systems, Prototyping, UI Generation, Design for AI, UX Design, Design Exploration.
@@ -44,6 +46,7 @@ Use when building a reusable primitive set, registry, product sections, or compo
 - `https://www.components.build`: baseline component architecture and API standard.
 - shadcn/ui, Radix UI, CVA, Tailwind, `cn(...)`: default React primitive stack when already present.
 - FarmUI, Efferd, 21st, React Bits: component and block inspiration; adapt tokens and accessibility to the current repo.
+- For broader coverage, use the [component source guide](ui-components.md): foundations, forms, data-heavy widgets, motion, page sections, and chat UI. It distinguishes code sources from discovery galleries and styled kits from unstyled primitives.
 - Storybook, Ladle, Histoire: component documentation, states, and visual review.
 - Tokens Studio, Style Dictionary, Figma Variables: token authoring and token-to-code workflows.
 
@@ -55,6 +58,13 @@ Use before inventing layouts from memory.
 - 21st, React Bits, Efferd, FarmUI: component-level and section-level references.
 - Vercel, E2B, Hex, Better Auth, Basement Studio: product, developer-platform, analytics, auth, and immersive storytelling references.
 - `designtools.fyi`: use for discovering the current tool landscape and comparing by archetype/facet.
+- [Sales CRM](https://sales-crm-kargulstudio.vercel.app/): company-table and filter composition reference. Read the [inspection notes](design-craft.md#sales-crm-reference) for observed patterns and adaptation guidance.
+
+### Companion Design Skills
+
+- [Jakub Krehel's better-ui](https://www.skills.sh/jakubkrehel/skills/better-ui): focused component polish, including surfaces, alignment, icons, and state transitions.
+- [Emil Kowalski's emil-design-eng](https://www.skills.sh/emilkowalski/skills/emil-design-eng): interaction craft, motion decisions, and component behavior.
+- Use [Design Craft References](design-craft.md) to choose the relevant material and apply it alongside the local design system. These are optional references; using this skill does not require installing either collection.
 
 ### Motion, 3D, And Visual Systems
 
