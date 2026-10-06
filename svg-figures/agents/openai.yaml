@@ -1,0 +1,4 @@
+interface:
+  display_name: "SVG Figures"
+  short_description: "Animated isometric and hairline SVG figures"
+  default_prompt: "Use $svg-figures to design and build an animated SVG figure or illustration that explains something."
